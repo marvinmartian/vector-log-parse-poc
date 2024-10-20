@@ -1,0 +1,51 @@
+# vector.yaml
+sources:
+  demo_logs:
+    type: file
+    include:
+      - /var/log/**/*.log
+    # Assuming the logs are UTF-8 encoded, if not, you may need to specify the encoding.
+    # encoding: utf-8
+
+transforms:
+  parse_log:
+    type: remap
+    inputs: ["demo_logs"] # Replace with your actual input source
+    source: |-
+      parsed = parse_regex!(.message, r'(?P<level>\w+), \[(?P<timestamp>[^\]]+)\] (?P<log_level>\w+) -- (?P<source>[^:]+): (?P<message>.+)')
+      .level = parsed.level
+      .timestamp = parsed.timestamp
+      .log_level = parsed.log_level
+      .source = parsed.source
+      .message = parsed.message
+
+  error_filter:
+    type: filter
+    inputs: ["parse_log"]
+    condition: 'contains!(.log_level, "ERROR")' # Filter logs that contain "ERROR"
+
+sinks:
+  stdout:
+    type: console
+    inputs: ["error_filter"]
+    encoding:
+      codec: json
+
+  http:
+    type: http
+    inputs: ["error_filter"]
+    uri: "http://python-app:8000/logs" # Replace with your endpoint
+    method: "post"
+    encoding:
+      codec: json
+    headers:
+      Content-Type: "application/json"
+
+    # Optional retry and batch configuration
+    healthcheck:
+      enabled: true
+    request:
+      in_flight_limit: 5
+      rate_limit_duration_secs: 1
+      retry_attempts: 5
+      timeout_secs: 10

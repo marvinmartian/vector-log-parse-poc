@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  # Vector service
+  vector:
+    image: timberio/vector:latest-alpine
+    container_name: vector
+    # network_mode: host
+    volumes:
+      - ./vector.yaml:/etc/vector/vector.yaml:ro
+      - ./generate-logs/test.log:/var/log/rails/test.log
+    restart: unless-stopped
+
+  # Python service
+  python-app:
+    image: python:3.11-alpine
+    container_name: python-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server.py:/app/server.py
+    working_dir: /app
+    command: ["python3", "server.py"]
+    restart: unless-stopped
+
+  # Golang log writer service
+  # golang-app:
+  #   build: ./go-app
+  #   container_name: golang-app
+  #   volumes:
+  #     - ./generate-logs:/var/log/rails  # Mount directory where logs will be written
+  #   restart: unless-stopped
