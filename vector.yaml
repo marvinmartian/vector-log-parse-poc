@@ -2,6 +2,7 @@
 sources:
   demo_logs:
     type: file
+    ignore_checkpoints: true
     include:
       - /var/log/**/*.log
     # Assuming the logs are UTF-8 encoded, if not, you may need to specify the encoding.
