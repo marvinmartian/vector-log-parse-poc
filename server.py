@@ -1,6 +1,8 @@
 import http.server
 import socketserver
 import json
+import signal
+import sys
 
 class MyHandler(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
@@ -18,8 +20,18 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(204)  # No Content response
         self.end_headers()  # End headers
 
+def signal_handler(signal_received, frame, httpd):
+    print('SIGTERM received, shutting down gracefully...')
+    httpd.shutdown()
+    sys.exit(0)
+
 if __name__ == '__main__':
     PORT = 8000
     with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
         print(f"Serving on port {PORT}")
-        httpd.serve_forever()  # Start the server
+
+        # Register the signal handler for SIGTERM
+        signal.signal(signal.SIGTERM, lambda signal_received, frame: signal_handler(signal_received, frame, httpd))
+
+        # Start the server
+        httpd.serve_forever()
