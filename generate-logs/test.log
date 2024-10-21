@@ -308,3 +308,171 @@ E, [2024-10-20T13:51:40.875054 #82758] ERROR -- Main: Completed 204 No Content i
 W, [2024-10-20T13:51:40.925552 #82758] WARN -- Main: Check out this info!
 D, [2024-10-20T13:51:40.975992 #82758] DEBUG -- Main: Rendered posts/index.html.erb within layouts/application
 E, [2024-10-20T13:51:41.026338 #82758] ERROR -- Main: Completed 500 Internal Server Error in 50ms (Views: 0.0ms | ActiveRecord: 25.0ms)
+I, [2024-10-20T14:19:52.686721 #90371] INFO -- Main: Started GET "/posts" for 127.0.0.1 at
+E, [2024-10-20T14:19:52.737438 #90371] ERROR -- Main: Rendered posts/index.html.erb within layouts/application
+W, [2024-10-20T14:19:52.788098 #90371] WARN -- Main: Started GET "/users/1" for 127.0.0.1 at
+W, [2024-10-20T14:19:52.838378 #90371] WARN -- Main: Started GET "/users/1" for 127.0.0.1 at
+D, [2024-10-20T14:19:52.888785 #90371] DEBUG -- Main: Started DELETE "/posts/1" for 127.0.0.1 at
+D, [2024-10-20T14:19:52.939464 #90371] DEBUG -- Main: Error rendering post: Post not found
+W, [2024-10-20T14:19:52.989934 #90371] WARN -- Main: Started POST "/posts" for 127.0.0.1 at
+E, [2024-10-20T14:19:53.040594 #90371] ERROR -- Main: Completed 302 Found in 20ms (ActiveRecord: 10.0ms)
+I, [2024-10-20T14:19:53.091103 #90371] INFO -- Main: Started PATCH "/users/1" for 127.0.0.1 at
+W, [2024-10-20T14:19:53.141762 #90371] WARN -- Main: Check out this info!
+D, [2024-10-20T14:19:53.192071 #90371] DEBUG -- Main: Redirected to /posts/1
+I, [2024-10-20T14:19:53.24258 #90371] INFO -- Main: Started POST "/posts" for 127.0.0.1 at
+D, [2024-10-20T14:19:53.292999 #90371] DEBUG -- Main: Rendered posts/index.html.erb within layouts/application
+W, [2024-10-20T14:19:53.343671 #90371] WARN -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+E, [2024-10-20T14:19:53.394114 #90371] ERROR -- Main: Processing by CommentsController#create as HTML
+W, [2024-10-20T14:19:53.444777 #90371] WARN -- Main: Completed 302 Found in 20ms (ActiveRecord: 10.0ms)
+W, [2024-10-20T14:19:53.495428 #90371] WARN -- Main: Completed 204 No Content in 35ms
+E, [2024-10-20T14:19:53.545691 #90371] ERROR -- Main: Started GET "/users/1" for 127.0.0.1 at
+D, [2024-10-20T14:19:53.595886 #90371] DEBUG -- Main: Started GET "/users/1" for 127.0.0.1 at
+E, [2024-10-20T14:19:53.646143 #90371] ERROR -- Main: Error rendering post: Post not found
+I, [2024-10-20T14:19:53.696818 #90371] INFO -- Main: Check out this info!
+E, [2024-10-20T14:19:53.747461 #90371] ERROR -- Main: Processing by CommentsController#create as HTML
+I, [2024-10-20T14:19:53.797672 #90371] INFO -- Main: Redirected to /posts/1
+E, [2024-10-20T14:19:53.84827 #90371] ERROR -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+D, [2024-10-20T14:19:53.898683 #90371] DEBUG -- Main: Processing by PostsController#index as HTML
+W, [2024-10-20T14:19:53.949287 #90371] WARN -- Main: Completed 302 Found in 20ms (ActiveRecord: 10.0ms)
+W, [2024-10-20T14:19:53.999676 #90371] WARN -- Main: Processing by PostsController#index as HTML
+I, [2024-10-20T14:19:54.050179 #90371] INFO -- Main: Unpermitted parameters: :secret
+W, [2024-10-20T14:19:54.100607 #90371] WARN -- Main: Processing by UsersController#show as HTML
+I, [2024-10-20T14:19:54.151106 #90371] INFO -- Main: Rendered posts/index.html.erb within layouts/application
+W, [2024-10-20T14:19:54.201654 #90371] WARN -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+D, [2024-10-20T14:19:54.252117 #90371] DEBUG -- Main: Error rendering post: Post not found
+I, [2024-10-20T14:19:54.302594 #90371] INFO -- Main: Error rendering post: Post not found
+E, [2024-10-20T14:19:54.353043 #90371] ERROR -- Main: Processing by PostsController#index as HTML
+W, [2024-10-20T14:19:54.403308 #90371] WARN -- Main: Completed 500 Internal Server Error in 50ms (Views: 0.0ms | ActiveRecord: 25.0ms)
+E, [2024-10-20T14:19:54.453921 #90371] ERROR -- Main: Unpermitted parameters: :secret
+E, [2024-10-20T14:19:54.504278 #90371] ERROR -- Main: User logged in successfully.
+W, [2024-10-20T14:19:54.554692 #90371] WARN -- Main: Check out this info!
+D, [2024-10-20T14:19:54.605159 #90371] DEBUG -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+E, [2024-10-20T14:19:54.655541 #90371] ERROR -- Main: User logged in successfully.
+I, [2024-10-20T14:19:54.706093 #90371] INFO -- Main: Rendered posts/index.html.erb within layouts/application
+I, [2024-10-20T14:19:54.756739 #90371] INFO -- Main: Processing by PostsController#index as HTML
+E, [2024-10-20T14:19:54.8072 #90371] ERROR -- Main: Check out this info!
+D, [2024-10-20T14:19:54.85772 #90371] DEBUG -- Main: Rendered posts/index.html.erb within layouts/application
+E, [2024-10-20T14:19:54.908154 #90371] ERROR -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+E, [2024-10-20T14:19:54.958326 #90371] ERROR -- Main: Started GET "/users/1" for 127.0.0.1 at
+W, [2024-10-20T14:19:55.008583 #90371] WARN -- Main: Error rendering post: Post not found
+E, [2024-10-20T14:19:55.059086 #90371] ERROR -- Main: Started POST "/posts" for 127.0.0.1 at
+E, [2024-10-20T14:19:55.109629 #90371] ERROR -- Main: Processing by CommentsController#create as HTML
+D, [2024-10-20T14:19:55.160259 #90371] DEBUG -- Main: Started POST "/posts" for 127.0.0.1 at
+D, [2024-10-20T14:19:55.210786 #90371] DEBUG -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+D, [2024-10-20T14:19:55.261165 #90371] DEBUG -- Main: Started GET "/users/1" for 127.0.0.1 at
+E, [2024-10-20T14:19:55.311809 #90371] ERROR -- Main: Check out this info!
+E, [2024-10-20T14:19:55.36217 #90371] ERROR -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+E, [2024-10-20T14:19:55.41266 #90371] ERROR -- Main: User logged in successfully.
+E, [2024-10-20T14:19:55.463118 #90371] ERROR -- Main: Redirected to /posts/1
+I, [2024-10-20T14:19:55.513752 #90371] INFO -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+W, [2024-10-20T14:19:55.564184 #90371] WARN -- Main: Unpermitted parameters: :secret
+W, [2024-10-20T14:19:55.614805 #90371] WARN -- Main: Processing by CommentsController#create as HTML
+W, [2024-10-20T14:19:55.665175 #90371] WARN -- Main: Processing by UsersController#show as HTML
+E, [2024-10-20T14:19:55.716009 #90371] ERROR -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:19:55.766257 #90371] DEBUG -- Main: Started GET "/users/1" for 127.0.0.1 at
+D, [2024-10-20T14:19:55.816935 #90371] DEBUG -- Main: Started GET "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:19:55.867783 #90371] INFO -- Main: User logged in successfully.
+I, [2024-10-20T14:19:55.918155 #90371] INFO -- Main: Redirected to /posts/1
+E, [2024-10-20T14:19:55.968979 #90371] ERROR -- Main: Processing by UsersController#show as HTML
+E, [2024-10-20T14:19:56.019612 #90371] ERROR -- Main: Processing by CommentsController#create as HTML
+D, [2024-10-20T14:19:56.069988 #90371] DEBUG -- Main: Error rendering post: Post not found
+I, [2024-10-20T14:19:57.803925 #90533] INFO -- Main: Started GET "/posts" for 127.0.0.1 at
+W, [2024-10-20T14:19:57.854535 #90533] WARN -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+D, [2024-10-20T14:19:57.905209 #90533] DEBUG -- Main: Check out this info!
+E, [2024-10-20T14:19:57.955906 #90533] ERROR -- Main: Started GET "/users/1" for 127.0.0.1 at
+I, [2024-10-20T14:19:58.006201 #90533] INFO -- Main: Error rendering post: Post not found
+E, [2024-10-20T14:19:58.056705 #90533] ERROR -- Main: Started DELETE "/posts/1" for 127.0.0.1 at
+E, [2024-10-20T14:19:58.107152 #90533] ERROR -- Main: Started PATCH "/users/1" for 127.0.0.1 at
+W, [2024-10-20T14:19:58.157833 #90533] WARN -- Main: Completed 302 Found in 20ms (ActiveRecord: 10.0ms)
+I, [2024-10-20T14:19:58.208415 #90533] INFO -- Main: Redirected to /posts/1
+W, [2024-10-20T14:19:58.25899 #90533] WARN -- Main: Processing by CommentsController#create as HTML
+D, [2024-10-20T14:19:58.309676 #90533] DEBUG -- Main: Started PATCH "/users/1" for 127.0.0.1 at
+E, [2024-10-20T14:19:58.360508 #90533] ERROR -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:19:58.41093 #90533] DEBUG -- Main: Error rendering post: Post not found
+E, [2024-10-20T14:19:58.461648 #90533] ERROR -- Main: Started GET "/posts" for 127.0.0.1 at
+D, [2024-10-20T14:19:58.512118 #90533] DEBUG -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:19:58.562894 #90533] DEBUG -- Main: Processing by UsersController#show as HTML
+I, [2024-10-20T14:19:58.613184 #90533] INFO -- Main: Check out this info!
+E, [2024-10-20T14:19:58.663574 #90533] ERROR -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:19:58.713986 #90533] DEBUG -- Main: User logged in successfully.
+W, [2024-10-20T14:19:58.764848 #90533] WARN -- Main: Rendered posts/index.html.erb within layouts/application
+D, [2024-10-20T14:19:58.815109 #90533] DEBUG -- Main: User logged in successfully.
+E, [2024-10-20T14:19:58.865928 #90533] ERROR -- Main: Started DELETE "/posts/1" for 127.0.0.1 at
+I, [2024-10-20T14:19:58.916207 #90533] INFO -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:19:58.966393 #90533] DEBUG -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+D, [2024-10-20T14:19:59.016797 #90533] DEBUG -- Main: Completed 302 Found in 20ms (ActiveRecord: 10.0ms)
+I, [2024-10-20T14:19:59.067514 #90533] INFO -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+E, [2024-10-20T14:19:59.117925 #90533] ERROR -- Main: Processing by UsersController#show as HTML
+W, [2024-10-20T14:19:59.16822 #90533] WARN -- Main: Error rendering post: Post not found
+E, [2024-10-20T14:19:59.218443 #90533] ERROR -- Main: Started POST "/posts" for 127.0.0.1 at
+W, [2024-10-20T14:19:59.268899 #90533] WARN -- Main: Started DELETE "/posts/1" for 127.0.0.1 at
+E, [2024-10-20T14:19:59.319384 #90533] ERROR -- Main: Started PATCH "/users/1" for 127.0.0.1 at
+I, [2024-10-20T14:19:59.369626 #90533] INFO -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:19:59.420029 #90533] DEBUG -- Main: Processing by CommentsController#create as HTML
+W, [2024-10-20T14:19:59.470258 #90533] WARN -- Main: Completed 500 Internal Server Error in 50ms (Views: 0.0ms | ActiveRecord: 25.0ms)
+D, [2024-10-20T14:19:59.520663 #90533] DEBUG -- Main: Started GET "/posts" for 127.0.0.1 at
+E, [2024-10-20T14:19:59.571368 #90533] ERROR -- Main: Started DELETE "/posts/1" for 127.0.0.1 at
+I, [2024-10-20T14:19:59.621759 #90533] INFO -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+I, [2024-10-20T14:19:59.671943 #90533] INFO -- Main: Started POST "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:19:59.722143 #90533] INFO -- Main: Redirected to /posts/1
+E, [2024-10-20T14:19:59.772629 #90533] ERROR -- Main: Started PATCH "/users/1" for 127.0.0.1 at
+I, [2024-10-20T14:19:59.823028 #90533] INFO -- Main: Error rendering post: Post not found
+I, [2024-10-20T14:19:59.873174 #90533] INFO -- Main: Processing by CommentsController#create as HTML
+E, [2024-10-20T14:19:59.923626 #90533] ERROR -- Main: Started POST "/posts" for 127.0.0.1 at
+W, [2024-10-20T14:19:59.974082 #90533] WARN -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+E, [2024-10-20T14:20:00.024804 #90533] ERROR -- Main: User logged in successfully.
+D, [2024-10-20T14:20:00.075172 #90533] DEBUG -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+E, [2024-10-20T14:20:00.125786 #90533] ERROR -- Main: Error rendering post: Post not found
+I, [2024-10-20T14:20:00.175985 #90533] INFO -- Main: Processing by UsersController#show as HTML
+W, [2024-10-20T14:20:00.226227 #90533] WARN -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+E, [2024-10-20T14:20:00.277002 #90533] ERROR -- Main: Error rendering post: Post not found
+E, [2024-10-20T14:20:00.327826 #90533] ERROR -- Main: Redirected to /posts/1
+I, [2024-10-20T14:20:00.378626 #90533] INFO -- Main: Completed 204 No Content in 35ms
+D, [2024-10-20T14:20:00.428801 #90533] DEBUG -- Main: Unpermitted parameters: :secret
+I, [2024-10-20T14:20:00.479643 #90533] INFO -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+I, [2024-10-20T14:20:00.530223 #90533] INFO -- Main: User logged in successfully.
+E, [2024-10-20T14:20:00.580955 #90533] ERROR -- Main: Completed 204 No Content in 35ms
+E, [2024-10-20T14:20:00.631735 #90533] ERROR -- Main: Started POST "/posts" for 127.0.0.1 at
+D, [2024-10-20T14:20:00.682306 #90533] DEBUG -- Main: Started GET "/posts" for 127.0.0.1 at
+D, [2024-10-20T14:20:00.733098 #90533] DEBUG -- Main: Started GET "/users/1" for 127.0.0.1 at
+E, [2024-10-20T14:20:00.783478 #90533] ERROR -- Main: Processing by UsersController#show as HTML
+I, [2024-10-20T14:20:00.834089 #90533] INFO -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+W, [2024-10-20T14:20:00.885002 #90533] WARN -- Main: Check out this info!
+D, [2024-10-20T14:20:00.93528 #90533] DEBUG -- Main: Unpermitted parameters: :secret
+E, [2024-10-20T14:20:00.986114 #90533] ERROR -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+D, [2024-10-20T14:20:01.036842 #90533] DEBUG -- Main: Started GET "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:20:01.087392 #90533] INFO -- Main: User logged in successfully.
+D, [2024-10-20T14:20:01.138033 #90533] DEBUG -- Main: Completed 204 No Content in 35ms
+W, [2024-10-20T14:20:01.188187 #90533] WARN -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+W, [2024-10-20T14:20:01.238624 #90533] WARN -- Main: User logged in successfully.
+W, [2024-10-20T14:20:01.289231 #90533] WARN -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+D, [2024-10-20T14:20:01.339756 #90533] DEBUG -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+I, [2024-10-20T14:20:01.39021 #90533] INFO -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+W, [2024-10-20T14:20:01.440734 #90533] WARN -- Main: Unpermitted parameters: :secret
+W, [2024-10-20T14:20:01.491154 #90533] WARN -- Main: Started GET "/users/1" for 127.0.0.1 at
+D, [2024-10-20T14:20:01.541901 #90533] DEBUG -- Main: Started POST "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:20:01.592193 #90533] INFO -- Main: Processing by PostsController#index as HTML
+W, [2024-10-20T14:20:01.642785 #90533] WARN -- Main: Completed 302 Found in 20ms (ActiveRecord: 10.0ms)
+E, [2024-10-20T14:20:01.693379 #90533] ERROR -- Main: Started POST "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:20:01.744115 #90533] INFO -- Main: Processing by UsersController#show as HTML
+D, [2024-10-20T14:20:01.794981 #90533] DEBUG -- Main: Rendered posts/index.html.erb within layouts/application
+W, [2024-10-20T14:20:01.845699 #90533] WARN -- Main: Started POST "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:20:01.896506 #90533] INFO -- Main: Started DELETE "/posts/1" for 127.0.0.1 at
+I, [2024-10-20T14:20:01.946909 #90533] INFO -- Main: Processing by PostsController#index as HTML
+D, [2024-10-20T14:20:01.997149 #90533] DEBUG -- Main: Started GET "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:20:02.04766 #90533] INFO -- Main: Processing by CommentsController#create as HTML
+I, [2024-10-20T14:20:02.098056 #90533] INFO -- Main: Completed 404 Not Found in 12ms (Views: 10.0ms | ActiveRecord: 2.0ms)
+I, [2024-10-20T14:20:02.148275 #90533] INFO -- Main: Started GET "/posts" for 127.0.0.1 at
+I, [2024-10-20T14:20:02.198875 #90533] INFO -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+D, [2024-10-20T14:20:02.249411 #90533] DEBUG -- Main: Unpermitted parameters: :secret
+D, [2024-10-20T14:20:02.299885 #90533] DEBUG -- Main: Completed 200 OK in 45ms (Views: 30.0ms | ActiveRecord: 15.0ms)
+I, [2024-10-20T14:20:02.350396 #90533] INFO -- Main: Check out this info!
+E, [2024-10-20T14:20:02.400881 #90533] ERROR -- Main: Processing by CommentsController#create as HTML
+I, [2024-10-20T14:20:02.45117 #90533] INFO -- Main: Completed 204 No Content in 35ms
+I, [2024-10-20T14:20:02.501911 #90533] INFO -- Main: Processing by UsersController#show as HTML
+D, [2024-10-20T14:20:02.552263 #90533] DEBUG -- Main: User logged in successfully.
+E, [2024-10-20T14:20:02.602475 #90533] ERROR -- Main: Completed 204 No Content in 35ms
+I, [2024-10-20T14:20:02.652687 #90533] INFO -- Main: Completed 204 No Content in 35ms
+D, [2024-10-20T14:20:02.703146 #90533] DEBUG -- Main: SQL (0.5ms)  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2  [["id", 1], ["LIMIT", 1]]
+W, [2024-10-20T14:20:02.753786 #90533] WARN -- Main: Rendered posts/index.html.erb within layouts/application
+D, [2024-10-20T14:20:02.804646 #90533] DEBUG -- Main: Started POST "/posts" for 127.0.0.1 at
